@@ -1,0 +1,64 @@
+<div class="container reader-section">
+<div class="col-md-9 col-md-offset-1">
+	<h2>Typography 101</h2>
+	<br>
+	<p class="lead"> Typography is an art &ndash; a combination of shapes and forms arranged in different point sizes, line heights, spaces and more. When used right you may not even notice, but when used incorrectly typography could ruin your entire project. </p>
+	<div class="row"><img class="img-responsive" src="/typewriter.jpg" alt="Type 101"></div>
+	<h3>Typeface vs. Fonts</h3>
+	<br>
+	<p>What? These aren't the same thing? These terms are often believed to be interchangeable, but actually carry different meanings. <strong>A typeface is a collection of fonts.</strong> For example, Helvetica is typeface, Helvetica Bold is a font. Anytime you are looking specifically at a collection of characters you are looking at a font, and when you view the creative work as whole you are viewing the typeface. </p>
+	<p>When developing for the web, the CSS code is as follows:</p>
+	<div class="html">
+	p { <br>
+		&emsp;&emsp;font-family: helvetica, sans-serif;<br>
+		&emsp;&emsp;font-size: 12pt; <br>
+		&emsp;&emsp;font-weight: 300;<br>
+		&emsp;&emsp;color: #333;<br>
+	}
+	</div>
+	<hr>
+	<div id="anatomy">
+	<h3>Anatomy</h3>
+	<br>
+	<p>Typefaces are human. Learning the anatomy of a typeface will help you break it down into individual forms and allow you to describe whether or not you like a particular one. <br><br>
+	In the example below you will see where the letters sit is the <b>baseline.</b> The capital letter spans from the baseline to the <b>Cap Line,</b> the space in between is the <b>Cap Height.</b> The <b>x&ndash;height</b> is just what it sounds like: the height of the lowercase 'x', topped off by the <b>Mean Line.</b> Finally, we have the <b>Beard Line,</b> the bottom most line of a character.</p>
+	<div class="row"><img class="img-responsive img-border" src="/anatomy1.png" alt="Anatomy of typeface"></div>
+	<p>This particular typeface is 'Garamond', an Old Style typeface. There are 5 main categories of typefaces which you can view <a href="/classifications"> here. </a> </p>
+	<div class="row"><img class="img-responsive img-border" src="/anatomy2.png" alt="Anatomy of typeface"></div>
+	</div>
+	<hr>
+	<h3>Kerning</h3>
+	<br>
+	<p>Kerning is the space between two letters.</p>
+	<div class="row"><img class="img-responsive img-border" src="/kerning.jpg" alt="Anatomy of typeface"></div>
+	<b>Pro Tip:</b> Need help with kerning? Space the letters until it doesn't piss you off anymore. 
+	<br><br>
+	<p>Most typefaces come preset with proper kerning, however there will definitely be times when you will have to set the kerning yourself, depending on how you prefer.</p>
+	<hr>
+	<h3>Tracking</h3>
+	<br>
+	<p>Often confused with kerning, tracking is the space between all letters of the whole word.</p>
+	<div class="row"><img class="img-responsive img-border" src="/tracking.jpg" alt="Anatomy of typeface"></div>
+	<p>Tracking highly effects readability. Too much tracking can cause the letters to look like they are floating away from each other. Tracking that is too tight may make the word blend together into a illegible word.</p>
+	<p> In web design, tracking is referred to as <b>letter-spacing.</b> Usually, you should leave letter-spacing as is, but if you want to adjust it:</p>
+	<div class="html">
+	p { <br>
+		&emsp;&emsp;letter-spacing: 1pt;<br>
+	}
+	</div>
+	<hr>
+	<h3>Leading</h3>
+	<br>
+	<p>The distance between baselines. Poor leading could give the reader a headache. </p>
+	<div class="row"><img class="img-responsive img-border" src="/leading.jpg" alt="Anatomy of typeface"></div>
+	<b>Pro Tip:</b> A proper leading ratio between font-size and line-height can usually be accomplished with a 1/1 or a 1/1.5 ratio.
+	<p> In web design this is referred to as <b>line-height.</b> As stated above, to keep a good ratio of font-size to line-height, the CSS is as follows:</p>
+	<div class="html">
+	p {<br>
+		&emsp;&emsp;font-size: 12pt; <br>
+		&emsp;&emsp;line-height: 1.5; <br>
+	}
+	</div>
+
+</div>
+</div> <!--end container-->

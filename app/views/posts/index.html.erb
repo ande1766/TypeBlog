@@ -1,0 +1,77 @@
+
+
+<div class="post-index" id="top">
+  <h1>Welcome to TypeNut</h1>
+  <p class="lead"> A typography network to share, create, and learn.</p>
+  <div class="index-link"><a onclick="function()" href="#posts"> <i class="fa fa-arrow-circle-down fa-4x" style="color:#fff;"></i></a></div>
+</div>
+
+<div class="col-sm-12 col-md-6 col-md-offset-3" id="posts">
+
+
+    <% @posts.reverse_each do |post| %>
+     
+       <h2><%= post.title %> </h2>
+       <br>
+        <%= image_tag post.photo.url(:med) %>
+        <br><br>
+       <p> <%= post.content %> </p>
+       <p> <%= link_to 'Read more', post.source %> </p>
+       <p> <%= post.author_id %> </p>
+
+       <hr>
+
+       <h4>Comments</h4>
+       <%= render :partial => post.comments %>
+       <%= form_for [@post, Comment.new] do |f| %>
+       <div id="white-link"><%= link_to "Add Comment", post, class: "btn btn-primary" %></div>
+       <% end %>
+
+      <hr>
+        <%= link_to 'Show', post %> |
+        <%= link_to 'Edit', edit_post_path(post) %> |
+        <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %> |
+        <%= link_to 'New Post', new_post_path %>
+      <hr>
+      <br><br><br>
+    <% end %>
+    
+
+
+<br>
+
+
+
+<div class="scroll-up"> <a onclick = "function()" href="#top"><i class="fa fa-arrow-circle-up fa-3x" style="color:#D63427"></i></a></div>
+
+<script>
+$(function(){
+  $(".index-link").on("click", function(){
+    $("html, body").animate({"scrollTop":$("#posts").offset().top}, 1000);
+    return false;
+  });
+});
+</script>
+
+<script>
+$(window).bind("scroll", function() {
+    if ($(this).scrollTop() > 500) {
+        $(".scroll-up").css("opacity","1").fadeIn("slow");
+    } 
+     if($(this).scrollTop() < 500) {
+      $(".scroll-up").css("opacity","0");
+    }
+
+});
+</script>
+
+<script>
+  $(function(){
+    $(".scroll-up").on("click",function() {
+      $("html body").animate({"scrollTop":0}, 1000);
+      return false;
+    });
+  });
+</script>
+
+</div>

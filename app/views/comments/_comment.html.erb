@@ -1,0 +1,5 @@
+<%= div_for(comment) do %>
+<b> <%= h(comment.body) %></b>
+<i> &ndash; Posted <%= time_ago_in_words(comment.created_at)%> ago <br></i>
+<br>
+<% end %>
